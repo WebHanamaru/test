@@ -20,3 +20,8 @@ Route::get('/about', function () {
 Route::get('/greeting', [App\Http\Controllers\GreetingController::class, 'index'])->name('greeting.index');
 Route::post('/greeting', [App\Http\Controllers\GreetingController::class, 'store'])->name('greeting.store');
 Route::delete('/greeting/{greeting}', [App\Http\Controllers\GreetingController::class, 'destroy'])->name('greeting.destroy');
+
+// API デモページ
+Route::get('/api-demo', function () {
+    return view('api-demo');
+});
